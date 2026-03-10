@@ -14,7 +14,7 @@ jobs:
 
       - run: unzip PandaAIAssistant.zip
 
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
@@ -24,7 +24,7 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: panda-ai-apk
           path: PandaAIAssistant/app/build/outputs/apk/debug/app-debug.apk
